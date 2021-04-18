@@ -1,1 +1,89 @@
-.Cart {}
+$navBg:#545454;
+$navBorderRadius:5px;
+$navWidth:60%;
+$navMargin:auto;
+$navPaddingTop:4px;
+
+$navItemColor:white;
+$navItemPaddingTop:12px;
+
+$display:flex;
+$alignItems:center;
+$flexWrap:wrap;
+$flexShrink:2;
+$imgWidth:100px;
+$imgHeight:100px;
+$templateNameWidth: 450px;
+$inlineFlex:inline-flex;
+
+$checkBottomPadding:1%;
+$checkTopPadding:1%;
+$checkBg:lightgray;
+
+$priceColor:#82b440;
+$pricePadding:10px;
+$fontFamily:Playfair, Display serif;
+
+
+
+.nav-cart
+{
+	background-color:$navBg;
+	border-radius:$navBorderRadius;
+	width:$navWidth;
+	margin:$navMargin;
+	padding-top:$navPaddingTop;
+}
+.nav-item-textcounter
+{
+	color:$navItemColor;
+	padding-top:$navItemPaddingTop;
+}
+.item-body
+{
+	width:$navWidth;
+	margin:$navMargin;
+}
+.ordered-item-arrangement
+{
+	display:$display;
+	align-items:$alignItems;
+	flex-wrap:$flexWrap;
+	flex-shrink:$flexShrink;
+
+}
+.item-ordered-image
+{
+	width:$imgWidth;
+	height:$imgHeight;
+}
+
+.template-name
+{
+	width:$templateNameWidth;
+}
+.item-delete
+{
+	align-items:$alignItems;
+	display:$inlineFlex;
+}
+
+.item-price
+{
+	color:$priceColor;
+	padding-top:$pricePadding;
+}
+
+.checkout-area
+{
+	backgroung-color:$checkBg;
+	border-radius:5px;
+	padding-top:$checkTopPadding;
+	padding-bottom:$checkBottomPadding;
+	margin:$navMargin;
+}
+
+.total-font-family
+{
+	font-family:fontFamily;
+}
