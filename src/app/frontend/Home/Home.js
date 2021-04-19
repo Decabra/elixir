@@ -1,9 +1,11 @@
 import React from 'react';
-import './Home.scss';
+import PropTypes from 'prop-types';
+import styles from './Home.module.scss';
 
 const Home = () => (
-    <main>
-        {/*<section className="sec-1">
+  <div className={styles.Home} data-testid="Home">
+      <main>
+          {/*<section className="sec-1">
             <header className="columns is-justify-content-flex-end m-0 pl-3 pt-3">
                 <div className="nav-menu-icon is-hidden-tablet pb-3">
                     <i (click)="toggleMenu()" class="pi pi-align-justify is-size-2" ></i>
@@ -150,8 +152,12 @@ const Home = () => (
             </div>
         </div>
     </section>*/}
-</main>
-
+      </main>
+  </div>
 );
+
+Home.propTypes = {};
+
+Home.defaultProps = {};
 
 export default Home;

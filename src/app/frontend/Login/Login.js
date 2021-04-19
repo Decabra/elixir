@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './Login.scss';
+import styles from './Login.module.scss';
 
 const Login = () => (
-  <div className="Login" data-testid="Login">
+  <div className={styles.Login} data-testid="Login">
     Login Component
   </div>
 );

@@ -1,10 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './AboutUs.scss';
+import styles from './AboutUs.module.scss';
 
 const AboutUs = () => (
-  <div className="AboutUs" data-testid="AboutUs">
+  <div className={styles.AboutUs} data-testid="AboutUs">
     AboutUs Component
+
   </div>
 );
 

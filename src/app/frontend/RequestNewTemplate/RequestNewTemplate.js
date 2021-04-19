@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './RequestNewTemplate.scss';
+import styles from './RequestNewTemplate.module.scss';
 
 const RequestNewTemplate = () => (
-  <div className="RequestNewTemplate" data-testid="RequestNewTemplate">
+  <div className={styles.RequestNewTemplate} data-testid="RequestNewTemplate">
     RequestNewTemplate Component
   </div>
 );
