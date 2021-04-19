@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './Products.scss';
+import styles from './Products.module.scss';
 
 const Products = () => (
-  <div className="Products" data-testid="Products">
+  <div className={styles.Products} data-testid="Products">
     Products Component
   </div>
 );

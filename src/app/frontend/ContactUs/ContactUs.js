@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './ContactUs.scss';
+import styles from './ContactUs.module.scss';
 
 const ContactUs = () => (
-  <div className="ContactUs" data-testid="ContactUs">
+  <div className={styles.ContactUs} data-testid="ContactUs">
     ContactUs Component
   </div>
 );
