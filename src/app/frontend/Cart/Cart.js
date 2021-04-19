@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import './Cart.scss';
 
 const Cart = () => (
@@ -20,6 +19,7 @@ const Cart = () => (
         </ul>
         <div className="shadow p-3 mb-5 bg-body rounded item-body" >
           <div className="ordered-item-arrangement" >
+            {/*img1 is not defined anywhere*/}
             <img src={img1} className="rounded item-ordered-image " alt="..."/>
             <article className="template-name"><a href="#" className="nav-link active text-lg-start fs-1">Template Name XYZ </a>
               <p className=" nav-link text-md-start">
