@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './Signup.scss';
+import styles from './Signup.module.scss';
 
 const Signup = () => (
-  <div className="Signup" data-testid="Signup">
+  <div className={styles.Signup} data-testid="Signup">
     Signup Component
   </div>
 );
