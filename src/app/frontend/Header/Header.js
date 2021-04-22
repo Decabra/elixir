@@ -21,7 +21,7 @@ const Header = () => {
         setMenuCounter(menuCounter + 1);
     }
     return (
-        <header className="columns is-justify-content-space-between is-flex-wrap-wrap is-align-items-center m-0 p-0">
+        <header className="columns is-justify-content-space-between is-flex-wrap-wrap is-align-items-center m-0 p-0 mb-6">
             <div className="columns column is-flex is-justify-content-space-between is-12-mobile m-0" >
                 <div className="column is-5 is-hidden-desktop is-hidden-mobile"></div>
                 <Link className={"column"} to={"/"}>
