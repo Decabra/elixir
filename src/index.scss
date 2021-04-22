@@ -13,4 +13,18 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+@font-face {
+  font-family: 'PoppinsRegular';
+  src: url(assets/fonts/poppins/Poppins-Regular.ttf) format("opentype");
+}
+*{
+  font-family: PoppinsRegular, serif;
+}
+html, body, main, section{
+  height: 100%;
+}
+html{
+  overflow: auto;
+  overflow-x: hidden;
+}
 @import "../node_modules/bulma/css/bulma.css";

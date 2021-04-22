@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faShoppingCart, faBars } from '@fortawesome/free-solid-svg-icons'
 
 const Header = () => {
-    let [menuState, setMenuState] = useState(false)
+    let [menuState, setMenuState] = useState(true)
     let [menuCounter, setMenuCounter] = useState(1)
     let navLinks = [
         {name : "Home", extraClasses: '', path: "/"},
@@ -21,18 +21,18 @@ const Header = () => {
         setMenuCounter(menuCounter + 1);
     }
     return (
-        <header className="columns is-justify-content-space-between is-flex-wrap-wrap is-align-items-center m-0 p-3">
-
-            <div className="columns column is-flex is-justify-content-space-between is-2 is-12-mobile m-0" >
-                <Link to={"/"}>
-                    <div className="column is-10-mobile is-flex">
+        <header className="columns is-justify-content-space-between is-flex-wrap-wrap is-align-items-center m-0 p-0">
+            <div className="columns column is-flex is-justify-content-space-between is-12-mobile m-0" >
+                <div className="column is-5 is-hidden-desktop is-hidden-mobile"></div>
+                <Link className={"column"} to={"/"}>
+                    <div className="is-10-mobile is-flex">
                         <img className={styles.logo} src={logo}  alt="elixir"/>
                         <span className="is-size-3 pl-2">Elixir</span>
                     </div>
                 </Link>
                 <div className="column is-2-mobile is-flex is-justify-content-center is-align-items-center is-hidden-tablet p-0">
                     <Link  className="column is-1" to={'/cart'}>
-                        <FontAwesomeIcon  icon={faShoppingCart} className="is-size-5" />
+                        <FontAwesomeIcon  icon={faShoppingCart} className="is-size-4" />
                     </Link>
                     <div onClick={toggleMenu}  className={styles.navMenuIcon}>
                         <FontAwesomeIcon  icon={faBars} className={`is-size-3`} />
