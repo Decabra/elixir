@@ -1,1 +1,12 @@
-.Signup {}
+.letterSpacing{
+    letter-spacing: 5px;
+}
+
+@media (min-width: 768px){
+    .bgImg { 
+        background-image: url('../../../assets/img/petals.png');
+        background-size: 100% 110%;
+        height: 100vh;
+        overflow-y: hidden;
+    }
+}
