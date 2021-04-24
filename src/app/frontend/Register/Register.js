@@ -4,7 +4,7 @@ import styles from './Register.module.scss';
 
 const Register = () => (
   <div className={styles.bgImg} data-testid="Register">
-    <section className={"section mt-6"}>
+    <section className={"section mt-4"}>
       <div className="container">
         <div className="columns is-centered">
           <div className={"column box is-mobile is-5-desktop is-8-tablet p-5"}>

@@ -16,7 +16,7 @@ const Home = () => {
     return (
         <div className={"p-1"} data-testid="Home">
             <Header/>
-            <main className="pb-6">
+            <main className="pb-6 mt-6">
                 <section>
                     <div className="columns is-flex-wrap-wrap">
                         <div className="column is-12-mobile is-flex is-align-items-center is-justify-content-center is-size-3-mobile is-size-4-tablet is-size-2-widescreen is-size-3-desktop has-text-weight-semibold">
