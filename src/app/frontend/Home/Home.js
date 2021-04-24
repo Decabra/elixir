@@ -16,10 +16,9 @@ const Home = () => {
     return (
         <div className={"p-1"} data-testid="Home">
             <Header/>
-            <main>
+            <main className="pb-6">
                 <section>
                     <div className="columns is-flex-wrap-wrap">
-                        <div className="column is-12"></div>
                         <div className="column is-12-mobile is-flex is-align-items-center is-justify-content-center is-size-3-mobile is-size-4-tablet is-size-2-widescreen is-size-3-desktop has-text-weight-semibold">
                             <div className="has-text-black has-text-centered-mobile">
                                 Awesome web templates for <br/>your business

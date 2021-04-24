@@ -7,7 +7,7 @@ import Footer from "../Footer/Footer";
 const RequestNewTemplate = () => (
   <div className={styles.RequestNewTemplate} data-testid="RequestNewTemplate">
       <Header/>
-      RequestNewTemplate Component
+      Hamza Component
       <Footer/>
   </div>
 );
