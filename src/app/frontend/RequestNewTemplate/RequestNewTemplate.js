@@ -18,7 +18,7 @@ const RequestNewTemplate= () => (
                           If you would like to request custom template of your
                           own choice and specification. Please drop us an email
                           at order@elixir.com or you can contact at this WhatsApp
-                          number +1 456 789 1212.
+                          number +1 456 789 1245.
 
 
                   </div>
