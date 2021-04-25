@@ -6,12 +6,13 @@ import puzzle from '../../../assets/img/puzzle.jpg'
 import engineering from '../../../assets/img/engineering.png'
 import art from '../../../assets/img/art.png'
 import ecommerce from '../../../assets/img/ecommerce.png'
+import {Link} from "react-router-dom";
 const Home = () => {
 
     let catCards = [
-        {name:"Engineering", tag:"Everything you need",imgPath:engineering},
-        {name:"eCommerce", tag:"Complete store",imgPath:art},
-        {name:"Art & design", tag:"Beautiful templates",imgPath:ecommerce},
+        {name:"Engineering", tag:"Everything you need",imgPath:engineering, path:'/products'},
+        {name:"eCommerce", tag:"Complete store",imgPath:art, path:'/products'} ,
+        {name:"Art & design", tag:"Beautiful templates",imgPath:ecommerce, path:'/products'},
     ];
     return (
         <div className={"p-1"} data-testid="Home">
@@ -38,18 +39,21 @@ const Home = () => {
                         </div>
                         <div className="columns is-flex-wrap-wrap is-justify-content-space-around">
                             {
-                                catCards.map(({name, tag, imgPath}, index) => (
-                                    <div key={index} className="columns column box is-flex-wrap-wrap is-3-desktop is-8 m-0 mt-6 pt-3 pb-6">
-                                        <div className="column is-12 has-text-centered has-text-black ">
-                                            <div className="is-size-3-mobile is-size-4-tablet is-size-4-desktop is-size-3-widescreen has-text-weight-semibold py-3">{name}</div>
-                                            <div className="is-size-6">{tag}</div>
+                                catCards.map(({name, tag, imgPath, path}, index) => (
+                                    <Link className="column is-3-desktop is-8" to={path}>
+                                        <div key={index} className="columns box is-flex-wrap-wrap m-0 mt-6 pt-3 pb-6">
+                                            <div className="column is-12 has-text-centered has-text-black ">
+                                                <div className="is-size-3-mobile is-size-4-tablet is-size-4-desktop is-size-3-widescreen has-text-weight-semibold py-3">{name}</div>
+                                                <div className="is-size-6">{tag}</div>
+                                            </div>
+                                            <div className="column is-12 pt-6 has-text-centered">
+                                                <img src={imgPath} alt=""/>
+                                            </div>
                                         </div>
-                                        <div className="column is-12 pt-6 has-text-centered">
-                                            <img src={imgPath} alt=""/>
-                                        </div>
-                                    </div>
+                                </Link>
                                 ))
                             }
+
                         </div>
                     </div>
                 </section>
