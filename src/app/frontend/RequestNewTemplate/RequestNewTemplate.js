@@ -19,8 +19,6 @@ const RequestNewTemplate= () => (
                           own choice and specification. Please drop us an email
                           at order@elixir.com or you can contact at this WhatsApp
                           number +1 456 789 1253.
-
-
                   </div>
               </div>
 
