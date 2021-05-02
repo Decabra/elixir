@@ -1,0 +1,35 @@
+.checkout-nav
+{
+  background-color: #fd7e14;
+  opacity:0.8;
+  margin-bottom: 3%;
+   margin-top: -19px;
+}
+.checkout-nav-head
+{
+  width: 35%;
+  margin: auto;
+  height: 100px;
+}
+
+.checkout-nav-text
+{
+  font-size: 40px; 
+  letter-spacing: 3px;
+}
+.card-link
+{
+  text-decoration:none;
+}
+.break-line
+{
+  background-color:black;
+}
+@media (min-width: 768px){
+    .bgImg { 
+        background-image: url('../../../assets/img/petals.png');
+        background-size: 100% 100%;
+        height: 100vh;
+        overflow-y: hidden;
+    }
+}
