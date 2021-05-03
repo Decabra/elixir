@@ -1,14 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styles from './Checkout.scss';
+import styles from './Checkout.module.scss';
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 const Checkout = () => (
   <div className='bg-white' data-testid="Cart">
       <Header/>
-         <nav className="navbar navbar-light checkout-nav">
-		    <div className="container-fluid checkout-nav-head"  >
-		      <span className="navbar-brand mb-0 h1 text-light checkout-nav-text">Secure Checkout</span>
+         <nav className="navbar navbar-light checkout-nav" className={styles.checkoutNav} >
+		    <div className="container-fluid checkout-nav-head" className={styles.checkoutNavHead}  >
+		      <span className="navbar-brand mb-0 h1 text-light" className={styles.checkoutNavText}>Secure Checkout</span>
 		    </div>
 		 </nav>
          <div className="container pb-5 mt-3">
