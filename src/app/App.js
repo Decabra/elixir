@@ -7,6 +7,7 @@ import Products from "./frontend/Products/Products";
 import ContactUs from "./frontend/ContactUs/ContactUs";
 import RequestNewTemplate from "./frontend/RequestNewTemplate/RequestNewTemplate";
 import Cart from "./frontend/Cart/Cart";
+import Checkout from "./frontend/Checkout/Checkout";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
                 <Route path="/contact" exact component={ContactUs}/>
                 <Route path="/request_template" exact component={RequestNewTemplate}/>
                 <Route path="/cart" exact component={Cart}/>
+                <Route path="/checkout" exact component={Checkout}/>
             </Switch>
         </div>
       </Router>
