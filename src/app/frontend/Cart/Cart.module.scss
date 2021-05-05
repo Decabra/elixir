@@ -27,14 +27,30 @@
   background-color:#100f0f;
   height: 0.4px;
 }
-@media only screen and (min-width: 900px) {
-      .card1 {
-        margin-top: -12%;
-      }
-    }
-    @media only screen and (max-width: 768px) {
-      .card1 {
-        margin-top: 3%;
-        width: 35rem;
-      }
-    }
+.card1
+{
+  width:30%;
+  margin-top: 0.7%;
+}
+@media only screen and (max-width: 950px) {
+.card1 {
+    margin-top: 1%;
+    width: 93%;
+    padding-bottom: 3%;
+    margin:auto;
+  }
+}
+@media only screen and (max-width: 950px) {
+  .car {
+    margin-right: 1%;
+    margin-left: 1%;
+    width: 90%;
+    margin:auto;
+  }
+}
+@media only screen and (max-width: 950px) {
+  .templateName {
+    padding-right: 6%;
+    padding-left: 3%;
+  }
+}
