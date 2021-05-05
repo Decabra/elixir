@@ -14,20 +14,20 @@ const Cart = () =>{
   return (
   <div  className='bg-white' data-testid="Cart">
     <Header/>
-    <nav className="navbar navbar-light " className={styles.cartNav}>
+    <nav className="navbar navbar-light" className={styles.cartNav}>
       <div className="container-fluid " className={styles.cartNavHead}>
         <span className="navbar-brand mb-0 h1 text-light " className={styles.cartNavText}>Cart</span>
       </div>
     </nav>
-    <section className="row ">
+    <section className="row " style={{margin:'20px'}}>
     <section  className="col-md-8 shadow rounded m-auto ml-5  mr-5 mt-2 mb-5 pb-5 pt-3 container"  >
         <section>
             <button className="btn btn-lg btn-outline-danger mx-4 mt-3">Empty Cart</button>
         </section>
         <section className="col-md-12 m-auto mx-4 pb-5 ">
             <div className="d-flex px-3 pt-5">
-                <div className="col-md-3">
-                    <img className="rounded-circle" src={img1} width="120px" height="120px;"/>
+                <div className="col-md-3" >
+                    <img className="rounded-circle" src={img1} width="150px" height="120px;"/>
                 </div>
                 <div className="col-md-6 pt-1" style={{width:'48%'}} className={styles.templateName}>
                     <a className="card-link h2 text-dark" style={{textDecoration:'none'}} href="#">Zapmata</a>
@@ -49,7 +49,7 @@ const Cart = () =>{
             </div>
             <div className="d-flex px-3 pt-5">
                 <div className="col-md-3">
-                    <img className="rounded-circle" src={img1} width="120px" height="120px;"/>
+                    <img className="rounded-circle" src={img1} width="150px" height="120px;"/>
                 </div>
                 <div className="col-md-6 pt-1 " style={{width:'48%'}} className={styles.templateName}>
                     <a className="card-link h2 text-dark" style={{textDecoration:'none'}} href="#">Zapmata</a>
@@ -71,7 +71,7 @@ const Cart = () =>{
             </div>
         </section>
     </section>
-    <section  className={styles.card1} style={{marginRight: '30px'}}>
+    <section  className={styles.card1} style={{marginRight: '10px'}}>
         <div className="rounded border-1 bg-white shadow pb-5 pt-3 text-center">
             <h3 className="h2 text-center pt-5 pb-5">Your Cart Total</h3>
             <h3 className="h2 text-center fw-bold pt-5 pb-5">$170</h3>
