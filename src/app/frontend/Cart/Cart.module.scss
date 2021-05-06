@@ -5,10 +5,14 @@
   margin-bottom: 1.5%;
    margin-top: 0px;
 }
+.star
+{
+  color:orange;
+}
 .cartNavHead
 {
  padding-top:1.5%;
-  width: 10%;
+  width: 15%;
   margin: auto;
   height: 100px;
 }
@@ -50,6 +54,7 @@
 }
 @media only screen and (max-width: 950px) {
   .templateName {
+    width:90%;
     padding-right: 6%;
     padding-left: 3%;
   }

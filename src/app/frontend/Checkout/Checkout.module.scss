@@ -23,3 +23,18 @@
 {
   background-color:black;
 }
+
+@media only screen and (max-width: 768px) {
+.checkoutNavHead {
+    margin-top: 1%;
+    padding-top:4%;
+    width: 93%;
+    padding-bottom: 3%;
+    margin:auto;
+  }
+  .containerForm
+  {
+    margin-left:5%;
+    margin-right:5%;
+  }
+}
