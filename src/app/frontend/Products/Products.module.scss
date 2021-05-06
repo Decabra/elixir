@@ -1,1 +1,72 @@
-.Products {}
+$orange : #ff9358;
+
+// .card{
+//     display: grid;
+//     grid-template-columns: 40% 50% 10%;
+//     .desc{
+//         min-height: 20vh;
+//         .prodName{
+//             color: $orange;
+//         }
+//     }
+//     .rating{
+//         margin-top: calc();
+//         .starRating{
+//             width: 20%;
+//             height: auto;
+//         }
+//     }
+//     .isOrange{
+//         color: $orange;
+//     }
+// }
+
+.adjustWidth{
+    max-width: 25em;
+    min-width: 22em;
+}
+
+.setMargin{
+    margin-top: 1.5em;
+}
+
+.image{
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+
+.middle{
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.cont{
+    position: relative;
+}
+
+.cont:hover .image{
+    filter: brightness(30%);
+}
+
+.cont:hover .middle{
+    opacity: 1;
+}
+
+@media (min-width: 768px){
+    .adjustWidth{
+        min-width: 25em;
+    }
+    .setMargin{
+        margin-top: 3em;
+    }
+}
