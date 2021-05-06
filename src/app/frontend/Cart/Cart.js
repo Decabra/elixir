@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styles from './Cart.scss';
+import styles from './Cart.module.scss';
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 import img1 from '../../../assets/img/right.jpg';
@@ -14,110 +14,77 @@ const Cart = () =>{
   return (
   <div  className='bg-white' data-testid="Cart">
     <Header/>
-    <nav className={"navbar navbar-light cart-nav"}>
-      <div className="container-fluid cart-nav-head">
-        <span className="navbar-brand mb-0 h1 text-light cart-nav-text">Cart</span>
+    <nav className={`navbar navbar-light ${styles.cartNav}`}>
+      <div className={`container-fluid text-center ${styles.cartNavHead}`}>
+        <span className={`navbar-brand mb-5 h1 text-light ${styles.cartNavText}`}>Cart</span>
       </div>
     </nav>
-    <section className='bg-white'>
-        <div className="container pb-2 pt-4">
-            <div className="wrapper wrapper-content ">
-                <div className="row">
-                    <div className="col-8 shadow rounded bg-white mb-3 pb-3">
-                        <div className="d-flex px-4 pt-4">
-                            <div className="col-md-10 h5">
-                                Items in your cart
-                            </div>
-                            <div className="col-md-2 h6">
-                                (<strong>5</strong>) items
-                            </div>
-                        </div>
-                        <hr className='break-line'style={{height:'0.6px'}}/>
-                        <div className="d-flex px-3">
-                            <div className="col-md-3">
-                                <img className="rounded-circle" src={img1} width="100" height="100"/>
-                            </div>
-                            <div className="col-md-6">
-                                <a className="card-link h5"  href="#">Desktop publishing software</a>
-                                <h6 className='h6'>Description list</h6>
-                                <p className='h6'>A description list is perfect for defining terms.</p>
-                            </div>
-                            <div className="col-md-3 text-center">
-                                <h4 className="">$50</h4>
-                                <div className="btn-group gap-2 py-3">
-                                    <a href="#" className="text-muted"><span className="material-icons">visibility</span></a>
-                                    <a href="#" className="text-muted"><span className="material-icons text-danger">highlight_off</span></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="d-flex px-3 pt-5">
-                            <div className="col-md-3">
-                                <img className="rounded-circle" src={img1} width="100" height="100"/>
-                            </div>
-                            <div className="col-md-6">
-                                <a className="card-link h5"  href="#">Desktop publishing software</a>
-                                <h6 className='h6'>Description list</h6>
-                                <p className='h6'>A description list is perfect for defining terms.</p>
-                            </div>
-                            <div className="col-md-3 text-center">
-                                <h4 className="">$50</h4>
-                                <div className="btn-group gap-2 py-3">
-                                    <a href="#" className="text-muted"><span className="material-icons">visibility</span></a>
-                                    <a href="#" className="text-muted"><span className="material-icons  text-danger">highlight_off</span></a>
-                                </div>
-                            </div>
-                        </div>
-                        <hr className='break-line' style={{height:'0.6px'}}/>
-                        <div className="px-3 pt-2">
-                            <nav className="navbar navbar-light">
-                            <div className="container-fluid">
-                                <button className="btn btn-white  d-flex"><span className="material-icons">arrow_left
-                                </span> Continue shopping</button>
-                                 {
-                                    checkoutLink.map(({name ,path}) => (
-                                        <Link className="rounded btn btn-outline-primary btn-md d-flex" to={path}>
-                                            <span className="material-icons">shopping_cart</span> Checkout
-                                    </Link>
-                                    ))
-                                 }
-                            </div>
-                            </nav>
-                        </div>
+    <section className="row" style={{margin:'20px'}}>
+    <section  className={`col-md-8 shadow rounded m-auto ml-5  mr-5 mt-2 mb-5 pb-5 pt-3 container ${styles.car}`}  >
+        <section>
+            <button className="btn btn-lg btn-outline-danger mx-4 mt-3">Empty Cart</button>
+        </section>
+        <section className="col-md-12 m-auto mx-4 pb-5 ">
+            <div className="d-flex px-3 pt-5">
+                <div className="col-md-3" style={{width:'25%'}}>
+                    <img className="rounded-circle" src={img1} width="120px" height="120px;"/>
+                </div>
+                <div className={`col-md-6 pt-1 ${styles.templateName}`} style={{width:'48%'}}>
+                    <a className="card-link h2 text-dark" style={{textDecoration:'none'}} href="#">Zapmata</a>
+                    <p className="h6 text-muted text-wrap ">Online Engineering Design <br/> Tools</p>
+                    <span className={`fa fa-star checked ${styles.star} `}></span>
+                    <span className={`fa fa-star checked ${styles.star} `}></span>
+                    <span className={`fa fa-star checked ${styles.star} `}></span>
+                    <span className={`fa fa-star checked ${styles.star} `}></span>
+                    <span className={`fa fa-star checked ${styles.star} `}></span>
+                    <span>(523 ratings)</span>
+                </div>
+                <div className="col-md-3 text-center pt-1">
+                    <h4 className="h3 fw-bold">$50</h4>
+                    <div className="btn-group gap-2 py-3">
+                        <a href="#" className="text-muted"><span className="material-icons">visibility</span></a>
+                        <a href="#" className="text-muted"><span className="material-icons  text-danger">highlight_off</span></a>
                     </div>
-
-                    <div className="col-md-4">
-                        <div className="card border-0 rounded shadow bg-white">
-                            <div className="card-body bg-white">
-                                <h5 className="card-title text-center">Order Summary</h5>
-                                <hr className='break-line'/>
-                                <div className="row p-2 text-center">
-                                    <p className="card-text col-md-6 h4">Total</p>
-                                    <p className="card-text col-md-6 h4">$1500</p>
-                                </div>
-                                <hr className='break-line' style={{height:'0.6px'}}/>
-                                <p className="text-md-center h6">
-                                    *For United States, France and Germany applicable sales tax will be applied
-                                </p>
-                                <div className="text-center pt-4">
-                                    <div className="btn-group gap-2">
-                                       {
-                                            checkoutLink.map(({name ,path}) => (
-                                                <Link className="rounded btn btn-outline-primary btn-md d-flex" to={path}>
-                                                    <span className="material-icons">shopping_cart</span> Checkout
-                                            </Link>
-                                            ))
-                                        }
-                                        <a href="#" className="rounded btn btn-outline-danger btn-md"> Empty Cart</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                
                 </div>
             </div>
+            <div className="d-flex px-3 pt-5">
+                <div className="col-md-3" style={{width:'25%'}}>
+                    <img className="rounded-circle" src={img1} width="120px" height="120px;"/>
+                </div>
+                <div className={`col-md-6 pt-1 ${styles.templateName} `} style={{width:'48%'}}>
+                    <a className="card-link h2 text-dark" style={{textDecoration:'none'}} href="#">Zapmata</a>
+                    <p className="h6 text-muted text-wrap ">Online Engineering Design <br/> Tools</p>
+                    <span className={`fa fa-star checked ${styles.star} `}></span>
+                    <span className={`fa fa-star checked ${styles.star} `}></span>
+                    <span className={`fa fa-star checked ${styles.star} `}></span>
+                    <span className={`fa fa-star checked ${styles.star} `}></span>
+                    <span className={`fa fa-star checked ${styles.star} `}></span>
+                    <span>(523 ratings)</span>
+                </div>
+                <div className="col-md-3 text-center pt-1">
+                    <h4 className="h3 fw-bold">$50</h4>
+                    <div className="btn-group gap-2 py-3">
+                        <a href="#" className="text-muted"><span className="material-icons">visibility</span></a>
+                        <a href="#" className="text-muted"><span className="material-icons  text-danger">highlight_off</span></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+    <section  className={` col-md-4 ${styles.card1}`} style={{marginRight: '25px'}}>
+        <div className="rounded border-1 bg-white shadow pb-5 pt-3 text-center">
+            <h3 className="h2 text-center pt-5 pb-5">Your Cart Total</h3>
+            <h3 className="h2 text-center fw-bold pt-5 pb-5">$170</h3>
+            {
+                checkoutLink.map(({name ,path}) => (
+                    <Link className="rounded btn btn-outline-primary btn-lg mt-5 mb-5 " to={path}>
+                         Secure Checkout
+                </Link>
+                ))
+            }
         </div>
     </section>
+</section>
     <Footer/>
     </div>
 );}

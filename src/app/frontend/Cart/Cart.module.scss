@@ -1,89 +1,61 @@
-$navBg:#545454;
-$navBorderRadius:5px;
-$navWidth:60%;
-$navMargin:auto;
-$navPaddingTop:4px;
-
-$navItemColor:white;
-$navItemPaddingTop:12px;
-
-$display:flex;
-$alignItems:center;
-$flexWrap:wrap;
-$flexShrink:2;
-$imgWidth:100px;
-$imgHeight:100px;
-$templateNameWidth: 450px;
-$inlineFlex:inline-flex;
-
-$checkBottomPadding:1%;
-$checkTopPadding:1%;
-$checkBg:lightgray;
-
-$priceColor:#82b440;
-$pricePadding:10px;
-$fontFamily:Playfair, Display serif;
-
-
-.Cart {}
-.nav-cart
+.cartNav
 {
-  background-color:$navBg;
-  border-radius:$navBorderRadius;
-  width:$navWidth;
-  margin:$navMargin;
-  padding-top:$navPaddingTop;
+  background-color: #fd7e14;
+  opacity:0.8;
+  margin-bottom: 1.5%;
+   margin-top: 0px;
 }
-.nav-item-textcounter
+.star
 {
-  color:$navItemColor;
-  padding-top:$navItemPaddingTop;
+  color:orange;
 }
-.item-body
+.cartNavHead
 {
-  width:$navWidth;
-  margin:$navMargin;
+ padding-top:1.5%;
+  width: 15%;
+  margin: auto;
+  height: 100px;
 }
-.ordered-item-arrangement
+.cartNavText
 {
-  display:$display;
-  align-items:$alignItems;
-  flex-wrap:$flexWrap;
-  flex-shrink:$flexShrink;
-
+  color:#ffff;
+  font-size: 40px; 
+  letter-spacing: 3px;
 }
-.item-ordered-image
+.cardLink
 {
-  width:$imgWidth;
-  height:$imgHeight;
+  text-decoration:none;
 }
-
-.template-name
+.breakLine
 {
-  width:$templateNameWidth;
+  background-color:#100f0f;
+  height: 0.4px;
 }
-.item-delete
+.card1
 {
-  align-items:$alignItems;
-  display:$inlineFlex;
+  width:30%;
+  margin-top: 0.7%;
 }
-
-.item-price
-{
-  color:$priceColor;
-  padding-top:$pricePadding;
+@media only screen and (max-width: 950px) {
+.card1 {
+    margin-top: 1%;
+    width: 93%;
+    padding-bottom: 3%;
+    margin:auto;
+  }
 }
-
-.checkout-area
-{
-  backgroung-color:$checkBg;
-  border-radius:5px;
-  padding-top:$checkTopPadding;
-  padding-bottom:$checkBottomPadding;
-  margin:$navMargin;
+@media only screen and (max-width: 950px) {
+  .car {
+    margin-right: 1%;
+    margin-left: 1%;
+    width: 90%;
+    margin:auto;
+  }
 }
-
-.total-font-family
-{
-  font-family:fontFamily;
+@media only screen and (max-width: 950px) {
+  .templateName {
+    width:90%;
+    padding-right: 6%;
+    padding-left: 3%;
+  }
 }
