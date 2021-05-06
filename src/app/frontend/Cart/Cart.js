@@ -22,7 +22,7 @@ const Cart = () =>{
     <section className="row" style={{margin:'20px'}}>
     <section  className={`col-md-8 shadow rounded m-auto ml-5  mr-5 mt-2 mb-5 pb-5 pt-3 container ${styles.car}`}  >
         <section>
-            <button className="btn btn-lg btn-outline-danger mx-4 mt-3">Empty Cart</button>
+            <button className="btn btn-lg btn-danger mx-4 mt-3">Empty Cart</button>
         </section>
         <section className="col-md-12 m-auto mx-4 pb-5 ">
             <div className="d-flex px-3 pt-5">
@@ -77,7 +77,7 @@ const Cart = () =>{
             <h3 className="h2 text-center fw-bold pt-5 pb-5">$170</h3>
             {
                 checkoutLink.map(({name ,path}) => (
-                    <Link className="rounded btn btn-outline-primary btn-lg mt-5 mb-5 " to={path}>
+                    <Link className="rounded btn btn-primary btn-lg mt-5 mb-5 " to={path}>
                          Secure Checkout
                 </Link>
                 ))

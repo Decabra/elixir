@@ -59,7 +59,7 @@ const Checkout = () => (
 			                  </div>
 			                </div>
 			                <div className="d-grid d-md-flex justify-content-md-end">
-			                  <button className="btn btn-lg btn-outline-success" type="button">Make Payment</button>
+			                  <button className="btn btn-lg btn-success" type="button">Make Payment</button>
 			                </div>
 			              </form>
 
