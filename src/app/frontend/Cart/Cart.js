@@ -30,7 +30,7 @@ const Cart = () =>{
                     <img className="rounded-circle" src={img1} width="120px" height="120px;"/>
                 </div>
                 <div className={`col-md-6 pt-1 ${styles.templateName}`} style={{width:'48%'}}>
-                    <a className="card-link h2 text-dark" style={{textDecoration:'none'}} href="#">Zapmata</a>
+                    <a className="card-link h4 text-dark fw-bold" style={{textDecoration:'none'}} href="#">Zapmata</a>
                     <p className="h6 text-muted text-wrap ">Online Engineering Design <br/> Tools</p>
                     <span className={`fa fa-star checked ${styles.star} `}></span>
                     <span className={`fa fa-star checked ${styles.star} `}></span>
@@ -40,7 +40,7 @@ const Cart = () =>{
                     <span>(523 ratings)</span>
                 </div>
                 <div className="col-md-3 text-center pt-1">
-                    <h4 className="h3 fw-bold">$50</h4>
+                    <h4 className="h3 fw-bold text-dark">$50</h4>
                     <div className="btn-group gap-2 py-3">
                         <a href="#" className="text-muted"><span className="material-icons">visibility</span></a>
                         <a href="#" className="text-muted"><span className="material-icons  text-danger">highlight_off</span></a>
@@ -52,7 +52,7 @@ const Cart = () =>{
                     <img className="rounded-circle" src={img1} width="120px" height="120px;"/>
                 </div>
                 <div className={`col-md-6 pt-1 ${styles.templateName} `} style={{width:'48%'}}>
-                    <a className="card-link h2 text-dark" style={{textDecoration:'none'}} href="#">Zapmata</a>
+                    <a className="card-link h4 text-dark fw-bold" style={{textDecoration:'none'}} href="#">Zapmata</a>
                     <p className="h6 text-muted text-wrap ">Online Engineering Design <br/> Tools</p>
                     <span className={`fa fa-star checked ${styles.star} `}></span>
                     <span className={`fa fa-star checked ${styles.star} `}></span>
@@ -62,7 +62,7 @@ const Cart = () =>{
                     <span>(523 ratings)</span>
                 </div>
                 <div className="col-md-3 text-center pt-1">
-                    <h4 className="h3 fw-bold">$50</h4>
+                    <h4 className="h3 fw-bold text-dark">$50</h4>
                     <div className="btn-group gap-2 py-3">
                         <a href="#" className="text-muted"><span className="material-icons">visibility</span></a>
                         <a href="#" className="text-muted"><span className="material-icons  text-danger">highlight_off</span></a>
@@ -73,8 +73,8 @@ const Cart = () =>{
     </section>
     <section  className={` col-md-4 ${styles.card1}`} style={{marginRight: '25px'}}>
         <div className="rounded border-1 bg-white shadow pb-5 pt-3 text-center">
-            <h3 className="h2 text-center pt-5 pb-5">Your Cart Total</h3>
-            <h3 className="h2 text-center fw-bold pt-5 pb-5">$170</h3>
+            <h2 className="h2 text-center pt-5 pb-5 text-dark d">Your Cart Total</h2>
+            <h2 className="h1 text-lg-center fw-bolder pt-5 pb-5 text-dark">$170</h2>
             {
                 checkoutLink.map(({name ,path}) => (
                     <Link className="rounded btn btn-primary btn-lg mt-5 mb-5 " to={path}>
