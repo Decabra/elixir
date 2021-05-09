@@ -1,21 +1,21 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styles from './Checkout.scss';
+import styles from './Checkout.module.scss';
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 const Checkout = () => (
   <div className='bg-white' data-testid="Cart">
       <Header/>
-         <nav className="navbar navbar-light checkout-nav">
-		    <div className="container-fluid checkout-nav-head"  >
-		      <span className="navbar-brand mb-0 h1 text-light checkout-nav-text">Secure Checkout</span>
-		    </div>
-		 </nav>
-         <div className="container pb-5 mt-3">
+         <nav className={`navbar navbar-light ${styles.checkoutNav}`}>
+      <div className={`container-fluid text-center ${styles.checkoutNavHead}`}>
+        <span className={`navbar-brand mb-5 h1 text-light text-wrap ${styles.checkoutNavText}`}>Secure Checkout</span>
+      </div>
+    </nav>
+         <div className={`container pb-5 mt-3 `}>
 			<div className="wrapper wrapper-content animated fadeInRight">
 			    <div className="row">
 			        <div className="col-md-8 pb-5" style={{marginTop: "19px"}}>
-			                <form className="row g-3 bg-white shadow p-5">
+			                <form className="row g-3 bg-white shadow p-5 mx-1">
 			                <h2 className="h2">Billings Details</h2>
 			                <div className="col-md-6">
 			                  <label for="inputFirstName" className="form-label">First Name</label>
@@ -64,22 +64,22 @@ const Checkout = () => (
 			              </form>
 
 			        </div>
-			        <div className="col-md-4">
-			            <div className="card border-0">
-			              <div className="card-body">
+			        <div className="col-md-4 ">
+			            <div className="card border-0 mx-2">
+			              <div className="card-body text-center">
 			                <h5 className="card-title text-center">Order Summary</h5>
-			                <div className="row">
-			                  <p className="card-text col-md-9">Shopping Website</p>
-			                  <p className="card-text col-md-3">$50</p>
+			                <div className="d-flex text-center">
+			                  <p className="card-text  col-md-8">Shopping Website</p>
+			                  <p className="card-text col-md-3 ml-5 pl-5">$50</p>
 			                </div>
-			                <div className="row">
-			                  <p className="card-text col-md-9">Shopping Website</p>
-			                  <p className="card-text col-md-3">$50</p>
+			                <div className="d-flex text-center">
+			                  <p className="card-text  col-md-8">Shopping Website</p>
+			                  <p className="card-text col-md-3 ml-5 pl-5">$50</p>
 			                </div>
 			                <hr style={{height:'1px',backgroundColor: "#242121"}}/>
-			                <div className="row p-2 text-center">
-			                  <p className="card-text col-md-6 h4">Total</p>
-			                  <p className="card-text col-md-6 h4">$1500</p>
+			                <div className="d-flex text-center">
+			                  <p className="card-text col-md-8  h5">Shopping Total</p>
+			                  <p className="card-text col-md-4  h5">$1500</p>
 			                </div>
 			              </div>
 			            </div>
