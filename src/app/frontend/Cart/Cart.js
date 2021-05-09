@@ -5,6 +5,7 @@ import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 import img1 from '../../../assets/img/right.jpg';
 import {Link} from "react-router-dom";
+import Heading from "../Heading/Heading";
 
 
 const Cart = () =>{
@@ -14,11 +15,7 @@ const Cart = () =>{
   return (
   <div  className='bg-white' data-testid="Cart">
     <Header/>
-    <nav className={`navbar navbar-light ${styles.cartNav}`}>
-      <div className={`container-fluid text-center ${styles.cartNavHead}`}>
-        <span className={`navbar-brand mb-5 h1 text-light ${styles.cartNavText}`}>Cart</span>
-      </div>
-    </nav>
+    <Heading text="Cart" />
     <section className="row" style={{margin:'20px'}}>
     <section  className={`col-md-8 shadow rounded m-auto ml-5  mr-5 mt-2 mb-5 pb-5 pt-3 container ${styles.car}`}  >
         <section>
