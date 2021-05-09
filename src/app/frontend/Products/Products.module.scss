@@ -1,72 +1,96 @@
 $orange : #ff9358;
 
-// .card{
-//     display: grid;
-//     grid-template-columns: 40% 50% 10%;
-//     .desc{
-//         min-height: 20vh;
-//         .prodName{
-//             color: $orange;
-//         }
-//     }
-//     .rating{
-//         margin-top: calc();
-//         .starRating{
-//             width: 20%;
-//             height: auto;
-//         }
-//     }
-//     .isOrange{
-//         color: $orange;
-//     }
-// }
-
-.adjustWidth{
-    max-width: 25em;
-    min-width: 22em;
+// Global Classes
+.orange{
+    color: $orange;
 }
 
-.setMargin{
-    margin-top: 1.5em;
+.bgorange{
+    background-color: $orange;
 }
 
-.image{
-    opacity: 1;
-    display: block;
-    width: 100%;
-    height: auto;
-    transition: .5s ease;
-    backface-visibility: hidden;
-}
 
-.middle{
+@mixin setPosition($left, $tx ){
     transition: .5s ease;
     opacity: 0;
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
+    top: 45%;
+    left: $left;
+    transform: translate($tx, -55%);
+    -ms-transform: translate($tx, -55%);
     text-align: center;
 }
 
-.cont{
-    position: relative;
+// Product Card
+.card{
+    width: 30em;
+    .cont{
+        position: relative;
+        &:hover .image{
+            filter: brightness(30%);
+        }
+        &:hover .middleLeft, &:hover .middleRight{
+            opacity: 1;
+        }
+        .image{
+            opacity: 1;
+            transition: .5s ease;
+            backface-visibility: hidden;
+        }
+        .middleLeft{
+            @include setPosition(43%, -57%);
+        }
+        .middleRight{
+            @include setPosition(57%, -43%);
+        }
+
+    }
+    .setMargin{
+        margin-top: 1.5em;
+    }
 }
 
-.cont:hover .image{
-    filter: brightness(30%);
-}
-
-.cont:hover .middle{
-    opacity: 1;
+// Product main page
+.Products{
+    .mlauto{
+        margin-left: auto;
+        .m{
+            margin-right: 1em;
+            // margin-left: auto;
+        }
+        .btnBorder{
+            border-color: $orange;
+            color: $orange;
+        }
+        
+        .btnHover{
+            transition: 0.2s ease;
+            &:hover{
+                background-color: rgba($color: $orange, $alpha: 0.2);
+                border-color: rgba($color: $orange, $alpha: 0.2);
+            }
+        }
+    }
 }
 
 @media (min-width: 768px){
-    .adjustWidth{
-        min-width: 25em;
+    .card{
+        width: 18em;
     }
     .setMargin{
         margin-top: 3em;
+    }
+    .m{
+        margin-right: 3em;
+    }
+    .searchbBarMargin{
+        margin: 0 1.5em;
+    }
+
+}
+
+@media (min-width: 1024px){
+    .card{
+        width: 27em;
     }
 }

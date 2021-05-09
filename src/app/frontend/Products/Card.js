@@ -1,24 +1,29 @@
 import React from 'react'
 import styles from './Products.module.scss';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEye } from '@fortawesome/free-solid-svg-icons';
+import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 
 const Card = (pros) => (
-    <div className={styles.adjustWidth}>
+    <div className={styles.card}>
         <div class="card m-4">
             <div class="card-image">
                 <div className={styles.cont}>
-                    <figure class="image is-3by2">
-                    <img src={pros.url} alt={pros.alt}  className={styles.image} />
+                    <figure class="image is-5by3">
+                        <img src={pros.url} alt={pros.alt}  className={styles.image} />
                     </figure>
-                    <div class={styles.middle}>
-                        <button className="button is-primary mr-3">Cart</button>
-                        <button className="button is-primary">Demo</button>
+                    <div className={styles.middleLeft}>
+                        <button className={`button is-link mr-3`}><FontAwesomeIcon icon={faShoppingCart} /></button>
+                    </div>
+                    <div className={styles.middleRight}>
+                        <button className={`button is-link`}><FontAwesomeIcon icon={faEye} /></button>
                     </div>
                 </div>
             </div>
             <div class="card-content">
                 <div class="media">
                     <div class="media-content">
-                        <p class="title is-size-4">{pros.name}</p>
+                        <p class={`title is-size-4 ${styles.orange}`}>{pros.name}</p>
                         <p class="subtitle is-6">{pros.desc}</p>
                     </div>
                 </div>
@@ -28,9 +33,9 @@ const Card = (pros) => (
                             <figure className="image is-5by1" style={{width: "5em"}}>
                                 <img src={pros.rating} alt="rating" />
                             </figure>                
-                            <p className="is-size-7">({pros.userRated})</p>
+                            <p className={`is-size-6 ${styles.orange}`}>({pros.userRated})</p>
                         </div>
-                        <p className="title is-size-5">{pros.cost}</p>
+                        <p className={`title is-size-5 ${styles.orange}`}>{pros.cost}</p>
                     </div>
                 </div>
             </div>
