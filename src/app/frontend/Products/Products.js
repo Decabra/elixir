@@ -8,8 +8,8 @@ import Card from './Card';
 import Engineering from '../../../assets/img/engineering.png';
 import Stars from '../../../assets/img/stars.png';
 
-
-const Products = () => (
+const Products = () => {
+  return(
   <div className={styles.Products} data-testid="Products">
       <Header/>
       <Heading text="Our Products" />
@@ -30,19 +30,20 @@ const Products = () => (
         </div>
         <div className="container is-flex flex-wrap is-justify-content-space-evenly">
           <Card url={Engineering} alt="Engineering" name="Zapmata" desc="Online Engineering Tool" rating={Stars} userRated="536" cost="$54"/>
-          <Card url={Engineering} alt="Engineering" name="Zapmata" desc="Online Engineering Tool" rating={Stars} userRated="536" cost="$62" />
-          <Card url={Engineering} alt="Engineering" name="Zapmata" desc="Online Engineering Tool" rating={Stars} userRated="536" cost="$35" />
-          <Card url={Engineering} alt="Engineering" name="Zapmata" desc="Online Engineering Tool" rating={Stars} userRated="536" cost="$54"/>
-          <Card url={Engineering} alt="Engineering" name="Zapmata" desc="Online Engineering Tool" rating={Stars} userRated="536" cost="$62" />
-          <Card url={Engineering} alt="Engineering" name="Zapmata" desc="Online Engineering Tool" rating={Stars} userRated="536" cost="$35" />
-          <Card url={Engineering} alt="Engineering" name="Zapmata" desc="Online Engineering Tool" rating={Stars} userRated="536" cost="$54"/>
-          <Card url={Engineering} alt="Engineering" name="Zapmata" desc="Online Engineering Tool" rating={Stars} userRated="536" cost="$62" />
-          <Card url={Engineering} alt="Engineering" name="Zapmata" desc="Online Engineering Tool" rating={Stars} userRated="536" cost="$35" />
+          <Card url={Engineering} alt="Engineering" name="Jevelin" desc="Online Engineering Tool" rating={Stars} userRated="536" cost="$62" />
+          <Card url={Engineering} alt="Engineering" name="Sajkl" desc="Online Engineering Tool" rating={Stars} userRated="536" cost="$35" />
+          <Card url={Engineering} alt="Engineering" name="Najjk" desc="Online Engineering Tool" rating={Stars} userRated="536" cost="$54"/>
+          <Card url={Engineering} alt="Engineering" name="Uouo" desc="Online Engineering Tool" rating={Stars} userRated="536" cost="$62" />
+          <Card url={Engineering} alt="Engineering" name="fdsfsfew" desc="Online Engineering Tool" rating={Stars} userRated="536" cost="$35" />
+          <Card url={Engineering} alt="Engineering" name="retr" desc="Online Engineering Tool" rating={Stars} userRated="536" cost="$54"/>
+          <Card url={Engineering} alt="Engineering" name="dsarew" desc="Online Engineering Tool" rating={Stars} userRated="536" cost="$62" />
+          <Card url={Engineering} alt="Engineering" name="gdqwe" desc="Online Engineering Tool" rating={Stars} userRated="536" cost="$35" />
         </div>
       </div>
       <Footer/>
   </div>
-);
+  )
+};
 
 Products.propTypes = {};
 

@@ -7,16 +7,17 @@ import engineering from '../../../assets/img/engineering.png'
 import art from '../../../assets/img/art.png'
 import ecommerce from '../../../assets/img/ecommerce.png'
 import {Link} from "react-router-dom";
-const Home = () => {
+const Home = (props) => {
 
     let catCards = [
         {name:"Engineering", tag:"Everything you need",imgPath:engineering, path:'/products'},
         {name:"eCommerce", tag:"Complete store",imgPath:art, path:'/products'} ,
         {name:"Art & design", tag:"Beautiful templates",imgPath:ecommerce, path:'/products'},
     ];
+    console.log("Home: ",props.loginState)
     return (
         <div className={"p-1"} data-testid="Home">
-            <Header/>
+            <Header loginState={props.loginState}/>
             <main className="pb-6 mt-6">
                 <section>
                     <div className="columns is-flex-wrap-wrap">

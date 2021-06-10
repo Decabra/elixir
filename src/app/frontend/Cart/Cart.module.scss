@@ -26,6 +26,9 @@
 {
   text-decoration:none;
 }
+.disabledLink {
+  pointer-events: none;
+}
 .breakLine
 {
   background-color:#100f0f;

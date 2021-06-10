@@ -10,7 +10,7 @@ const RequestNewTemplate= () => (
       <Heading text="Want Unique Design?" />
       <main className="mt-6">
           <section className="columns is-justify-content-center px-6">
-              <div className={`${styles.reqTempColor} column is-8-desktop box is-10-tablet is-12-mobile p-6 has-text-justified`}>
+              <div className={`${styles.reqTempColor} column is-8-desktop shadow-lg box is-10-tablet is-12-mobile p-6 has-text-justified`}>
                   <div className="has-text-weight-semibold is-size-4 pb-6">
                       Available Method
                   </div>

@@ -23,6 +23,7 @@ function Login(em, ps){
             console.log(user.Password," : ", pass);
             if(user.Password === pass){
               correctEP = true
+              localStorage.setItem("loginState", JSON.stringify(true));
               window.location.href ="/";
             }
           } 

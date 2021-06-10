@@ -3,23 +3,41 @@ import {Link} from "react-router-dom";
 import styles from './Header.module.scss';
 import logo from '../../../assets/img/logo.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faShoppingCart, faBars } from '@fortawesome/free-solid-svg-icons'
+import { faShoppingCart, faBars, faUser } from '@fortawesome/free-solid-svg-icons'
 
 const Header = () => {
     let [menuState, setMenuState] = useState(true)
     let [menuCounter, setMenuCounter] = useState(1)
-    let navLinks = [
-        {name : "Home", extraClasses: '', path: "/"},
-        {name : "Products",  extraClasses: '', path: "/products"},
-        {name : "Request template", extraClasses: 'is-3-tablet is-3-desktop ',  path: "/request_template"},
-        {name : "Contact us",  extraClasses: 'is-2',  path: "/contact"},
-        {name : "Log in",  extraClasses: '', path: "/login"},
-        {name : "Sign up",  extraClasses: '', path: "/register"}
-    ]
+    var navLinks;
+    const loginState = JSON.parse(localStorage.getItem("loginState"));
+    if(loginState === true){
+        navLinks = [
+            {name : "Home", extraClasses: '', path: "/"},
+            {name : "Products",  extraClasses: '', path: "/products"},
+            {name : "Request template", extraClasses: 'is-3-tablet is-3-desktop ',  path: "/request_template"},
+            {name : "Contact us",  extraClasses: 'is-2',  path: "/contact"},
+            {name : "user", extraClasses: 'is-1', path:""}
+        ]
+    }
+    else{
+        navLinks = [
+            {name : "Home", extraClasses: '', path: "/"},
+            {name : "Products",  extraClasses: '', path: "/products"},
+            {name : "Request template", extraClasses: 'is-3-tablet is-3-desktop ',  path: "/request_template"},
+            {name : "Contact us",  extraClasses: 'is-2',  path: "/contact"},
+            {name : "Log in",  extraClasses: '', path: "/login"},
+            {name : "Sign up",  extraClasses: '', path: "/register"}
+        ]
+    }
     let toggleMenu = () => {
         setMenuState(!menuState);
         setMenuCounter(menuCounter + 1);
     }
+    
+    const logout = () => {
+        localStorage.setItem("loginState", JSON.stringify(false))
+    }
+
     return (
         <header className="columns is-justify-content-space-between is-flex-wrap-wrap is-align-items-center m-0 p-0">
             <div className="columns column is-flex is-justify-content-space-between is-12-mobile m-0" >
@@ -40,11 +58,24 @@ const Header = () => {
                 </div>
             </div>
             <nav className={`${menuState ? 'is-hidden-mobile' : ''} columns column is-10-desktop is-8-widescreen is-12-tablet has-text-centered-tablet is-align-items-flex-end p-pb-md-6 p-pr-md-6 has-text-weight-semibold`}>
-                    {navLinks.map( ({name, extraClasses, path}, index) => (
-                        <Link key={index} className={`column ${extraClasses}`} to={path}>
-                                {name}
-                        </Link>
-                    ))}
+                    {navLinks.map( ({name, extraClasses, path}, index) => {
+                        if(name === "user"){
+                            return(
+                                <Link key={index} className="column is-hidden-mobile is-1" to={'/'} style={{display: "flex"}} >
+                                    <FontAwesomeIcon  icon={faUser} className="is-size-5"  />
+                                    <a onClick={logout}><span style={{paddingLeft: "5px"}}>Logout</span></a>
+                                </Link>            
+                            )
+                        }
+                        else{
+                            return(
+                                <Link key={index} className={`column ${extraClasses}`} to={path}>
+                                    {name}
+                                </Link>
+                            )
+                        }
+                    })}
+
                     <Link  className="column is-hidden-mobile is-1" to={'/cart'}>
                         <FontAwesomeIcon  icon={faShoppingCart} className="is-size-5" />
                     </Link>
